@@ -7,7 +7,7 @@ Produzido em: Abril/2021
 
 ### Quem sou eu?
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/IMG_1840.jpg](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/IMG_1840.jpg)
+![src/IMG_1840.jpg](src/IMG_1840.jpg)
 
 Discente de Engenharia de Computação pela UFMS (2019 - ~~Ad infinitum~~), já participei da equipe de robótica Ararabots (2019) na categoria Very Small Size Soccer. Atualmente, participo de uma Iniciação Científica (PIBIC) em processamentos de imagens por Deep Learning em parceria com a Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA). Minha principal linguagem de programação é Python e não tenho medo de C/C++. Tenho um gato que se chama Oswaldo ;)
 
@@ -30,14 +30,14 @@ Não se preocupe em decorar os comandos inicialmente, com a prática você os de
 Git é um software de versionamento de projetos de qualquer natureza (geralmente adotado para versionamento de códigos, mas pode ser adotado em qualquer tipo de projeto, como LaTeX, Notebooks, etc), desenvolvido por [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds) (criador do sistema operacionall Linux) em 2005.
 Basicamente, o Git rastreia modificações nos projetos de forma a permitir o retorno a edições anteriores e criação de diferentes ramos.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Screenshot_from_2021-04-24_22-03-14.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Screenshot_from_2021-04-24_22-03-14.png)
+![src/Screenshot_from_2021-04-24_22-03-14.png](src/Screenshot_from_2021-04-24_22-03-14.png)
 
 O Git evita situações como a da foto acima, que tenho **certeza** que todos vocês já fizeram isso 🤣.
 Ao utilizar o Git, o **único** arquivo existente seria "trabalho.pdf" e seria possível navegar entre suas versões sem sobrescrita e perda de dados. 
 
 ### 1.1 - Git e GitHub/GitLab/BitBucket/Outros NÃO são a mesma coisa!
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled.png)
+![src/Untitled.png](src/Untitled.png)
 
 Como explicado anteriormente, o Git é um programa de versionamento de projetos, já o GitHub e afins são serviços de **repositório remoto**. Por hora, entenda repositórios remotos como uma forma de hospedar seu versionamento online.
 
@@ -140,7 +140,7 @@ Ficará mais claro posteriormente, **prometo**.
 
 Nota: por conveniência abreviaremos repositório como repo.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%201.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%201.png)
+![src/Untitled%201.png](src/Untitled%201.png)
 
 Abra o diretório do seu projeto no terminal. E digite o seguinte comando:
 
@@ -162,7 +162,7 @@ git init
 
 E se inserirmos "*git status"* novamente veremos que iniciamos um repo vazio (sem nenhum arquivo sendo rastreado ainda), mesmo se o nosso diretório não estiver vazio (no meu caso há o arquivo "index.html", mas isso é arbitrário, ou seja, você pode ter o arquivo que você quiser).
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%202.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%202.png)
+![src/Untitled%202.png](src/Untitled%202.png)
 
 Para adicionar arquivos ao repo, basta utilizar o comando:
 
@@ -172,17 +172,17 @@ git add <file_name>
 
 Desta forma, teremos que:
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%203.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%203.png)
+![src/Untitled%203.png](src/Untitled%203.png)
 
 O meu arquivo "index.html" é um arquivo em branco, não há nada nele. Caso eu efetue um commit agora, a única mudança registrada seria a adição do arquivo ao repo. Mas vou modificá-lo antes de fazer o primeiro commit:
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%204.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%204.png)
+![src/Untitled%204.png](src/Untitled%204.png)
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%205.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%205.png)
+![src/Untitled%205.png](src/Untitled%205.png)
 
 Não se importe se você **não entendeu** bulhufas do código acima, apenas quero que entenda que o código a esquerda reproduz essa página no navegador. (Sim, escrevemos Git errado de próposito). Que tal se checarmos o status do nosso repo agora?
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%206.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%206.png)
+![src/Untitled%206.png](src/Untitled%206.png)
 
 As modificações já foram identificadas pelo Git! Mas e agora? 
 
@@ -224,13 +224,13 @@ Um conceito importante e muito útil para nós é o conceito de branch, em tradu
 
 A imagem abaixo tem uma representação muito boa do processo. Há dois galhos, master e new_feature, cada círculo representa um commit. Note que o primeiro commit de new_feature se origina de master.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%207.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%207.png)
+![src/Untitled%207.png](src/Untitled%207.png)
 
 Após a ramificação, new_feature faz outro commit onde imaginamos que uma nova feature esteja pronta para se fundir com o branch master, representado pela função **merge** (será discutida mais para frente).
 
 ### Tá, mas como assim galho?
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%208.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%208.png)
+![src/Untitled%208.png](src/Untitled%208.png)
 
 Se você vive no século 21, você com certeza já assistiu Vingadores Ultimato.
 
@@ -259,15 +259,15 @@ git checkout <name_of_branch> #Muda de branch para o que você acabou de criar
 
 No caso do meu projeto exemplo, eu criei um novo branch chamado *text_fix,* onde eu consertei o texto que estava errado (lembra que eu disse que era proposital?), e adicionei uma estilização.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%209.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%209.png)
+![src/Untitled%209.png](src/Untitled%209.png)
 
 O * indica o branch que estou.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2010.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2010.png)
+![src/Untitled%2010.png](src/Untitled%2010.png)
 
 Alteração no código
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2011.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2011.png)
+![src/Untitled%2011.png](src/Untitled%2011.png)
 
 Resultado
 
@@ -294,7 +294,7 @@ Como explicado anteriormente, repositório remoto é um serviço para armazenar 
 
 Por questão de gosto, escolherei o GitHub para hospedar meu repositório remoto. Caso queira utilizá-lo, entre no [site](http://github.com) e se cadastre. Depois de devidamente cadastrado, procure a opção para criar um novo repositório.
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2012.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2012.png)
+![src/Untitled%2012.png](src/Untitled%2012.png)
 
 Deixarei meu repositório público, seu nome será "mini-curso-git" e deixarei os outros campos em branco por hora.
 
@@ -328,7 +328,7 @@ O comando utilizado para ver as diferenças entre versões. Por exemplo:
 git log
 ```
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2013.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2013.png)
+![src/Untitled%2013.png](src/Untitled%2013.png)
 
 É possível acessar os commits anteriores pela chave deles, isto é, esse código a frente de commit. Como pode ser observado a baixo.
 
@@ -336,7 +336,7 @@ git log
 git diff ffe33ad2c226f472c91e29b4bcf229bd43b39049
 ```
 
-![Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2014.png](Minicurso%20GIT%20a34aac3831424625b5d3b5f4635e5825/Untitled%2014.png)
+![src/Untitled%2014.png](src/Untitled%2014.png)
 
 O código acima representa todas as mudanças entre o meu branch mais recente até o meu primeiro commit (cuja chave é esse monstro visto no git log)
 
