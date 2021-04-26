@@ -420,7 +420,7 @@ Críticas construtivas são sempre bem vindas e se possível por favor deixe um 
 
 Agradeço a você que teve força e resiliência de acompanhar esse tutorial até o final. Espero que sua jornada seja mais produtiva com a ferramenta que lhe apresentei e que contribua com algum repo Open-Source por aí ou crie algo relevante e disponibilize isso para todos.
 
-Agradeço também ![Yan Uehara](https://github.com/yanuehara) pela revisão do texto.
+Agradeço também [Yan Uehara](https://github.com/yanuehara) pela revisão do texto.
 
 ---
 
