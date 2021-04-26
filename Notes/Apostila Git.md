@@ -25,6 +25,44 @@ Recomendo que você teste os comandos conforme progride em sua leitura, a fixaç
 
 Não se preocupe em decorar os comandos inicialmente, com a prática você os decorará sem perceber.
 
+---
+
+## Sumário:
+
+[1 - Mas o que raios é Git?](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#1---mas-o-que-raios-%C3%A9-git)
+
+[1.1 - Git e GitHub/GitLab/BitBucket/Outros NÃO são a mesma coisa!](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#11---git-e-githubgitlabbitbucketoutros-n%C3%A3o-s%C3%A3o-a-mesma-coisa)
+
+[1.2 - Motivação](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#12---motiva%C3%A7%C3%A3o)
+
+[2 - Instalação](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#2---instala%C3%A7%C3%A3o)
+
+[2.1 - Linux](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#21---linux)
+
+[2.2 - Windows](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#22---windows)
+
+[2.3 - MacOS](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#23---macos)
+
+[3 - Repositórios e Commits](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#3---reposit%C3%B3rios-e-commits)
+
+[3.1 - Reposiório Local](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#31---reposit%C3%B3rio-local)
+
+[3.2 - Repositório Remoto](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#32---reposit%C3%B3rio-remoto)
+
+[4 - Começando de fato...](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#4---come%C3%A7ando-de-fato)
+
+[5 - Branches](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#5---branches)
+
+[6 - Repositórios Remotos](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#6---reposit%C3%B3rios-remotos)
+
+[Curiosidades](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#curiosidades)
+
+[Feedback](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#feedback)
+
+[Agradecimentos](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#agradecimentos)
+
+[Custos](https://github.com/EdmarCaixeta/mini-curso-git/blob/master/Notes/Apostila%20Git.md#custo)
+
 ## 1 - Mas o que raios é Git?
 
 Git é um software de versionamento de projetos de qualquer natureza (geralmente adotado para versionamento de códigos, mas pode ser adotado em qualquer tipo de projeto, como LaTeX, Notebooks, etc), desenvolvido por [Linus Torvalds](https://pt.wikipedia.org/wiki/Linus_Torvalds) (criador do sistema operacionall Linux) em 2005.
@@ -158,6 +196,10 @@ O terminal retornou essa mensagem pois não inicializamos o diretório como um r
 
 ```bash
 git init
+
+#Se for a primeira vez que usar o Git na sua máquina os comandos abaixo também serão necessários para identificação
+git config --global user.name "<user_name>" 
+git config --global user.email "<user_email@email.com>"
 ```
 
 E se inserirmos "*git status"* novamente veremos que iniciamos um repo vazio (sem nenhum arquivo sendo rastreado ainda), mesmo se o nosso diretório não estiver vazio (no meu caso há o arquivo "index.html", mas isso é arbitrário, ou seja, você pode ter o arquivo que você quiser).
@@ -197,17 +239,23 @@ git add index.html
 git commit -m "Add body and head"
 ```
 
+A flag "-m" serve para anexar uma mensagem ao commit que está entre aspas, mas pode ser qualquer coisa que você desejar. É uma boa prática indicar de forma **concisa** a modificação feita (ainda mostrarei o por quê). Se a flag não for utilizada o terminal abrirá uma página com editor de texto para você inserir essa mesma mensagem, a flag é mais prática. 
+
+Sugiro que testem fazer o commit sem adicionar os arquivos que mudaram. E ver o que acontece.
+
 O status retornará que não há mudanças para subir. **Pronto, criamos nossa primeira versão!**
 
  
 
-Tente o comando "*git log*" para ver o histórico de commits do seu repo.
+Teste o comando "*git log*" para ver o histórico de commits do seu repo.
 
 Caso deseje retornar a um commit use o comando:
 
 ```bash
 git checkout <commit_key>
 ```
+
+Ao usar o "*git log*" você verá que os commits são nomeados com chaves, elas podem ser usadas para acessá-los ou para usar o comando diff que você verá mais a frente.
 
 ### Resumo do que aprendemos até agora
 
@@ -216,19 +264,20 @@ git checkout <commit_key>
 - Adicionar arquivos ao repo
 - Commit
 - Restore
+- Transitar entre Commits
 - Log
 
 ## 5 - Branches
 
-Um conceito importante e muito útil para nós é o conceito de branch, em tradução livre, galho. Usamos os branches de forma ímplicita até agora, ao utilizar o comando "*git stauts*" o terminal retorna "*On branch master, nothing to commit*", ou seja, qualquer commit que fizermos estamos atualizando o branch master, que é o **galho principal** da nossa aplicação.
+Um conceito importante e muito útil para nós é o conceito de branch, em tradução livre, ramificação. Usamos os branches de forma ímplicita até agora, ao utilizar o comando "*git stauts*" o terminal retorna "*On branch master, nothing to commit*", ou seja, qualquer commit que fizermos estamos atualizando o branch master, que é o **ramo principal** da nossa aplicação.
 
-A imagem abaixo tem uma representação muito boa do processo. Há dois galhos, master e new_feature, cada círculo representa um commit. Note que o primeiro commit de new_feature se origina de master.
+A imagem abaixo tem uma representação muito boa do processo. Há dois **branches**, *master* e *new_feature*, cada círculo representa um commit. Note que o primeiro commit de new_feature se origina de master.
 
 ![src/Untitled%207.png](src/Untitled%207.png)
 
 Após a ramificação, new_feature faz outro commit onde imaginamos que uma nova feature esteja pronta para se fundir com o branch master, representado pela função **merge** (será discutida mais para frente).
 
-### Tá, mas como assim galho?
+### Tá, mas como assim ramificação?
 
 ![src/Untitled%208.png](src/Untitled%208.png)
 
@@ -251,9 +300,9 @@ Um novo branch é uma área de testes, onde você poderá testar novos estilos, 
 Os comandos para alteração de branches:
 
 ```bash
-git branch #lista todos os branches do repo
-git branch <name_of_branch> #cria um novo branch
-git branch -D <name_of_branch> #deleta um branch localmente
+git branch #Lista todos os branches do repo
+git branch <name_of_branch> #Cria um novo branch
+git branch -D <name_of_branch> #Deleta um branch localmente
 git checkout <name_of_branch> #Muda de branch para o que você acabou de criar
 ```
 
@@ -370,6 +419,8 @@ Críticas construtivas são sempre bem vindas e se possível por favor deixe um 
 ## Agradecimentos:
 
 Agradeço a você que teve força e resiliência de acompanhar esse tutorial até o final. Espero que sua jornada seja mais produtiva com a ferramenta que lhe apresentei e que contribua com algum repo Open-Source por aí ou crie algo relevante e disponibilize isso para todos.
+
+Agradeço também ![Yan Uehara](https://github.com/yanuehara) pela revisão do texto.
 
 ---
 
