@@ -11,7 +11,7 @@ Produzido em: Abril/2021
 
 Discente de Engenharia de Computação pela UFMS (2019 - ~~Ad infinitum~~), já participei da equipe de robótica Ararabots (2019) na categoria Very Small Size Soccer. Atualmente, participo de uma Iniciação Científica (PIBIC) em processamentos de imagens por Deep Learning em parceria com a Empresa Brasileira de Pesquisa Agropecuária (EMBRAPA). Minha principal linguagem de programação é Python e não tenho medo de C/C++. Tenho um gato que se chama Oswaldo ;)
 
-Saiba mais, através desse [link](https://linktr.ee/edmarcaixeta).
+Se conecte comigo, através desse [link](https://linktr.ee/edmarcaixeta).
 
 ---
 
@@ -124,7 +124,7 @@ Para verificar se a instalação está correta basta digitar:
 git --version
 ```
 
-Ou você pode instalá-lo através do instalador padrão, disponível nesse [link](http://git-scm.com/download/win).
+Ou você pode instalá-lo através do instalador padrão, disponível nesse [link](http://git-scm.com/download/win). Nesse outro [link](https://dicasdeprogramacao.com.br/como-instalar-o-git-no-windows/) você encontrará um guia passo-a-passo, caso ache necessário.
 
 ### 2.3 - MacOS
 
@@ -387,7 +387,13 @@ git diff ffe33ad2c226f472c91e29b4bcf229bd43b39049
 
 ![src/Untitled%2014.png](src/Untitled%2014.png)
 
-O código acima representa todas as mudanças entre o meu branch mais recente até o meu primeiro commit (cuja chave é esse monstro visto no git log)
+O código acima representa todas as mudanças entre o meu branch mais recente até o meu primeiro commit (cuja chave é esse monstro visto no git log).
+
+Esse comando é válido para diferenciar também branches, o comando abaixo diferenciará o branch atual do branch emitido no comando:
+
+```bash
+git diff <branch_name>
+```
 
 ### Pull-Request
 
